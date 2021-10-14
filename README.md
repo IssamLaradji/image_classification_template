@@ -7,7 +7,7 @@
 ### 2. Train and Validate
 
 ```python
-python trainval.py -e mnist -sb ../results -r 1
+/mnt/home/miniconda3/bin/python trainval.py -e mnist -sb ../results -r 1
 ```
 
 Argument Descriptions:
@@ -16,6 +16,35 @@ Argument Descriptions:
 -sb [Directory where the experiments are saved]
 -r  [Flag for whether to reset the experiments]
 -d  [Directory where the datasets are aved]
+```
+
+or with vscode
+
+```
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "trainval",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/trainval.py",
+            "console": "integratedTerminal",
+            "args": [
+                // "-e", "transient",
+                "-e",
+                "mnist",
+                "-sb",
+                "/mnt/public/results/tmp",
+                "-r",
+                "1",
+            ],
+        },
+    ]
+}
 ```
 
 ### 3. Visualize the Results
