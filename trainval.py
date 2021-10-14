@@ -46,7 +46,7 @@ def trainval(exp_dict, savedir, args):
         # Save Metrics in "savedir" as score_list.pkl
         cm.log_metrics(score_dict)
         torch.save(model.state_dict(), os.path.join(savedir, "model.pth"))
-        self.chk_dict["score_list"]
+
         # Save Example Image for qualitative results
         # image = hu.save_image()
         hu.save_image(os.path.join(savedir, "images", "example.png"), train_set[0][0])

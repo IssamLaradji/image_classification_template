@@ -11,7 +11,7 @@ from haven import haven_utils as hu
 from haven import haven_wizard as hw
 from torchvision import datasets, transforms, models
 
-DEVICE = 'cuda'
+DEVICE = "cuda"
 
 
 def get_model(name, exp_dict):
@@ -82,6 +82,9 @@ class Linear(torch.nn.Module):
                 if i > 5:
                     break
             return np.hstack(i_list)[:, :, None].repeat(3, axis=2)
+
+    def set_state_dict(self, state_dict):
+        self.load_state_dict(state_dict)
 
     def train_on_loader(self, loader, **extras):
         for batch in tqdm.tqdm(
