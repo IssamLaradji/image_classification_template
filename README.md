@@ -15,7 +15,8 @@ Argument Descriptions:
 -e  [Experiment group to run like 'vae' (the rest of the experiment groups are in exp_configs/main_exps.py)] 
 -sb [Directory where the experiments are saved]
 -r  [Flag for whether to reset the experiments]
--d  [Directory where the datasets are aved]
+-d  [Directory where the datasets are saved]
+-j ['toolkit' to use the toolkit cluster]
 ```
 
 or with vscode
